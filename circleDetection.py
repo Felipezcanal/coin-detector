@@ -19,7 +19,7 @@ def detectCircles(i_image, colored_image):
 image = cv2.imread("coins.jpg", cv2.IMREAD_COLOR)
 cimg = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 cv2.namedWindow("coins", cv2.WINDOW_KEEPRATIO)
-
+# print('teste')
 while True:
 	cv2.imshow("coins", image.astype('uint8'))
 	key = cv2.waitKey(1) & 0xFF
@@ -27,6 +27,4 @@ while True:
 		detectCircles(cimg, image)
 	elif key == ord("c"):
 		break
-
-
 cv2.destroyAllWindows()
